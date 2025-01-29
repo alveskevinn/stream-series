@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Streaming de Séries</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #141414;
+            color: #fff;
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        /* Header */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 50px;
+            background-color: rgba(0, 0, 0, 0.7);
+            position: fixed;
+            width: 100%;
+            z-index: 1000;
+        }
+
+        header .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #e50914;
+        }
+
+        header nav ul {
+            display: flex;
+            list-style: none;
+        }
+
+        header nav ul li {
+            margin-left: 20px;
+        }
+
+        header nav ul li a {
+            font-size: 16px;
+            transition: color 0.3s;
+        }
+
+        header nav ul li a:hover {
+            color: #e50914;
+        }
+
+        .hero {
+            height: 100vh;
+            background: url('https://images7.alphacoders.com/130/1306944.jpeg') no-repeat center center/cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 0 20px;
+            position: relative;
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+        }
+
+        .hero-content {
+            z-index: 1;
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 20px;
+            margin-bottom: 30px;
+        }
+
+        .hero button {
+            padding: 10px 20px;
+            font-size: 18px;
+            background-color: #e50914;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .hero button:hover {
+            background-color: #f40612;
+        }
+
+        .series {
+            padding: 50px 20px;
+        }
+
+        .series h2 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        .series-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+
+        .series-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 10px;
+            transition: transform 0.3s;
+        }
+
+        .series-item img {
+            width: 100%;
+            display: block;
+            border-radius: 10px;
+        }
+
+        .series-item:hover {
+            transform: scale(1.05);
+        }
+
+        .series-item .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .series-item:hover .overlay {
+            opacity: 1;
+        }
+
+        .series-item .overlay button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #e50914;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .series-item .overlay button:hover {
+            background-color: #f40612;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #000;
+            margin-top: 50px;
+        }
+
+        footer p {
+            font-size: 14px;
+            color: #888;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">StreamSeries</div>
+        <nav>
+            <ul>
+                <li><a href="#">Início</a></li>
+                <li><a href="#">Séries</a></li>
+                <li><a href="#">Filmes</a></li>
+                <li><a href="#">Minha Lista</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Stranger Things</h1>
+            <p>Uma cidade pequena descobre um mistério envolvendo experimentos secretos, forças sobrenaturais e uma garota desaparecida.</p>
+            <button>Assistir Agora</button>
+        </div>
+    </section>
+
+    <section class="series">
+        <h2>Populares</h2>
+        <div class="series-grid">
+            <div class="series-item">
+                <img src="https://www.sonypictures.com.br/sites/brazil/files/2022-03/DP_4690515_TC_1400x2100_DP_4690517_SpidermanFarFromHome_2019_ITUNES_2000x3000_BR_thumbnail_xlarge.jpg" alt="Série 1">
+                <div class="overlay">
+                    <button>Assistir</button>
+                </div>
+            </div>
+            <div class="series-item">
+                <img src="https://www.sonypictures.com.br/sites/brazil/files/2022-03/DP_3409108_TC_1400x2100_DP_3409112_SpiderManHomecoming_INTL_2017_2000x3000_BR_thumbnail_xlarge.jpg" alt="Série 2">
+                <div class="overlay">
+                    <button>Assistir</button>
+                </div>
+            </div>
+            <div class="series-item">
+                <img src="https://www.sonypictures.com.br/sites/brazil/files/2021-11/DP_6301415_VenomLetThereBeCarnage_2021_ITUNES_LSR_2000x3000_BR_thumbnail_xlarge.jpg" alt="Série 3">
+                <div class="overlay">
+                    <button>Assistir</button>
+                </div>
+            </div>
+            <div class="series-item">
+                <img src="https://www.sonypictures.com.br/sites/brazil/files/2024-01/TMV_banners_1400x2100.jpg" alt="Série 4">
+                <div class="overlay">
+                    <button>Assistir</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 StreamSeries. Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>
