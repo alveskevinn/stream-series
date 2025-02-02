@@ -27,7 +27,7 @@ Siga os passos abaixo para rodar o projeto localmente:
 
 1. **Clone o repositório**:
    ```bash
-   git clone https://github.com/seu-usuario/streamseries.git
+   git clone https://github.com/alveskevinn/streamseries.git
 Acesse a pasta do projeto:
 
 
@@ -112,21 +112,4 @@ LinkedIn: Kevin Pedroso
 E-mail: kevinpedrosodev@gmail.com
 
 🌟 Agradecimentos
-Inspiração: Netflix, Amazon Prime, Disney+.
-
-Imagens: Placeholder para imagens de exemplo.
-
----
-
-### Como Usar no GitHub
-
-1. Crie um arquivo chamado `README.md` na raiz do seu repositório.
-2. Copie e cole o conteúdo acima nesse arquivo.
-3. Faça commit e push para o GitHub:
-   ```bash
-   git add README.md
-   git commit -m "Adiciona README.md"
-   git push origin main
-
-O GitHub renderizará automaticamente o conteúdo do README.md na página inicial do repositório.
-
+Inspiração: Netflix, Amazon.
